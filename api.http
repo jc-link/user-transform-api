@@ -1,0 +1,22 @@
+### Test api GET /hello
+GET http://localhost:3333/api/v1/user/hello
+
+### Post an user
+POST http://localhost:3333/api/v1/user
+Content-Type: application/json
+
+{
+  "user_name": "Arthas Menethil",
+  "user_email": "arthas@mail.com",
+  "user_rut": "12345542-6",
+  "user_phone": 4
+}
+
+###Get an non existent endpoint
+GET http://localhost:3333/api/v1/user
+
+###Get an user by id
+GET http://localhost:3333/api/v1/user/678acd80c646bd63fee80aec
+
+###Get an an object of users
+POST http://localhost:3333/api/v1/users
