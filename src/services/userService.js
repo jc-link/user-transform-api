@@ -1,6 +1,6 @@
-import User from '../models/User.js'
+const User = require('../models/User')
 
-export class UserService {
+class UserService {
 
     static async getUser(id) {
         try {
@@ -68,4 +68,14 @@ export class UserService {
         return usersDTO.map(userDTO => this.mapUser(userDTO))
     }
 
+    static healthCheck() {
+        return 'User service is working'
+    }
+
+    static async healthCheckAsync() {
+        return Promise.resolve('User service is working')
+    }
+
 }
+
+module.exports = UserService
